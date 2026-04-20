@@ -25,7 +25,7 @@ public class MazeRobot extends RobotController {
 
             double distance = mbot.readUltrasonic();
 
-            // First check: obstacle in front
+            // First check: the obstacle in front
             if (distance > 0 && distance < 15) {
                 mbot.stop();
 
