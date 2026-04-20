@@ -862,3 +862,59 @@ def stop_at_line_behavior():
 def handle_stop_at_line(payload):
     scheduler.start_behavior("STOP_AT_LINE", stop_at_line_behavior)
     return ok_response("STOP_AT_LINE behavior started")
+
+def follow_line_behavior():
+    if arbiter.acquire("line", " FOLLOW_LINE ", 10, blocking=False):
+        return
+    try:
+        status = mbuild.quad_rgb_sensor.get_line_sta()
+    finally:
+        arbiter.release("line", " FOLLOW_LINE ")
+    if not arbiter.acquire("motors", " FOLLOW_LINE ", 10, blocking=False):
+        return
+    try:
+	    kp = 0.4
+	    base_speed = 30
+	    if status == 0:
+            error = 5
+        #Will turn right
+
+        elif status == 1:
+            error = 1
+        #will continue straight
+
+        elif (status > 1 and status < 4):
+            error = -5
+        #This handles 2 and 3
+
+        elif (status >= 4 and status <= 7):
+            error = -10
+        #This handles 5, 6, and 7
+
+        else:
+            error = 10
+
+        #This handles 8 and beyond
+
+        correction = error * kp
+        em1_speed = base_speed + correction
+        em1_speed = min(max(em1_speed, -50), 50)
+        em2_speed = -base_speed + correction
+        em2_speed = min(max(em2_speed, -50), 50)
+        mbot2.drive_speed(em1_speed, em2_speed)
+
+
+
+    finally:
+        arbiter.release("motors", " FOLLOW_LINE ")
+
+@register_command("FOLLOW_LINE")
+def handle_follow_line(payload):
+    scheduler.start_behavior("FOLLOW_LINE", follow_line_behavior)
+    return ok_response("Following Line")
+
+
+@register_command("FOLLOW_LINE")
+def handle_follow_line(payload):
+    scheduler.start_behavior("FOLLOW_LINE", follow_line_behavior)
+    return ok_response("Following Line")

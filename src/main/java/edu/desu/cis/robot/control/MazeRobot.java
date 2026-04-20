@@ -21,6 +21,7 @@ public class MazeRobot extends RobotController {
         // need to implement.
     }
 
+
     /**
      * The main entry point for the MazeRobot application.
      * @param args Command line arguments (not used).
