@@ -17,9 +17,39 @@ public class MazeRobot extends RobotController {
     }
 
 
-    public void run(){
+    @Override
+    public void run() {
         // need to implement.
+
+        while (true) {
+
+            double distance = mbot.readUltrasonic();
+
+            // First check: obstacle in front
+            if (distance > 0 && distance < 15) {
+                mbot.stop();
+
+                // Turn right first
+                mbot.turnRight(90);
+
+                // Re-check distance after turning right
+                double afterTurn = mbot.readUltrasonic();
+
+                // If still blocked, turn left instead
+                if (afterTurn > 0 && afterTurn < 15) {
+                    mbot.turnLeft(180);  // 180 = undo right turn + turn left
+                }
+
+                continue;
+            }
+
+            // Otherwise move forward
+            mbot.forward(30);
+
+            try { Thread.sleep(100); } catch (Exception e) {}
+        }
     }
+
 
     /**
      * The main entry point for the MazeRobot application.
