@@ -14,7 +14,7 @@ public class SquareRobot extends RobotController {
         }
     }
     public static void main(String[] args) {
-        try (SquareRobot robot = new SquareRobot("StingBot")) {
+        try (SquareRobot robot = new SquareRobot("Gorn")) {
             robot.run();
         }
     }
