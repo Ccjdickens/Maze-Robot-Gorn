@@ -250,6 +250,28 @@ public class MBot2 {
     }
 
     /**
+     * Flashes all LEDs a given number of times in the specified color.
+     * Blocks until all flashes are complete.
+     *
+     * @param times  Number of flashes (1–20).
+     * @param red    Red component (0–255).
+     * @param green  Green component (0–255).
+     * @param blue   Blue component (0–255).
+     * @param delay  On/off duration in seconds (e.g. 0.3).
+     */
+    public void flashLed(int times, int red, int green, int blue, double delay) {
+        execute("FLASH_LED",
+                Map.of(
+                        "times", times,
+                        "red",   red,
+                        "green", green,
+                        "blue",  blue,
+                        "delay", delay
+                )
+        );
+    }
+
+    /**
      * Turns off a specific LED.
      * @param id The ID of the LED to turn off.  if id < 1 or id > 0
      *           then all 5 LEDs are turned off.
@@ -353,10 +375,10 @@ public class MBot2 {
     public String getColorObjectFromCamera(boolean needsLight) {
         CommandResult<JsonNode> result =
                 execute("GET_SENSOR",
-                    Map.of(
-                            "sensor", "CAMERA_COLOR",
-                            "light", needsLight ? "YES" : "NO"
-                    )
+                        Map.of(
+                                "sensor", "CAMERA_COLOR",
+                                "light", needsLight ? "YES" : "NO"
+                        )
                 );
 
         return result.data().get("color").asText();
@@ -463,6 +485,25 @@ public class MBot2 {
     }
 
     /**
+     * Commands the robot to drive forward continuously, arcing left whenever
+     * an obstacle is detected within the threshold distance.
+     * Returns immediately; the behavior runs in the background until stopped.
+     *
+     * @param thresholdCm  Distance in centimetres at which to begin steering (e.g. 25).
+     * @param speed        Forward speed for both motors (0–100).
+     * @param diff         Amount to reduce the inner motor to create the arc (0 to speed).
+     */
+    public void steerAround(double thresholdCm, double speed, double diff) {
+        execute("STEER_AROUND",
+                Map.of(
+                        "threshold", thresholdCm,
+                        "speed",     speed,
+                        "diff",      diff
+                )
+        );
+    }
+
+    /**
      * Stops a specific behavior on the robot.
      * @param behaviorName The name of the behavior to stop.
      */
@@ -480,17 +521,7 @@ public class MBot2 {
         execute("STOP_ALL_BEHAVIORS", null);
     }
 
-    public void flashLed(int times, int red, int green, int blue, double delay) {
-        execute("FLASH_LED",
-                Map.of(
-                        "times", times,
-                        "red", red,
-                        "green", green,
-                        "blue", blue,
-                        "delay", delay
-                )
-        );
-    }
+
 
     private CommandResult<JsonNode> execute(String command, Map<String,Object> params) {
 
@@ -506,7 +537,12 @@ public class MBot2 {
                         ? "ERROR("+response.getErrorCode() + "): "
                         : "" + response.getMessage()
         );
-
     }
 
+    /**
+     * Commands the robot to push an object out of the way.
+     */
+    public void pushObject() {
+        execute("PUSH_OBJECT", null);
+    }
 }

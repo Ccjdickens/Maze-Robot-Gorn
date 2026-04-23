@@ -22,7 +22,7 @@ public class RovingRobot extends RobotController {
     }
 
     public static void main(String[] args) {
-        try (RovingRobot robot = new RovingRobot("DickensCupid")) {
+        try (RovingRobot robot = new RovingRobot("Gorn")) {
             robot.run();
         }
     }

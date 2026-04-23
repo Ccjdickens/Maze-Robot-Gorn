@@ -13,7 +13,7 @@ public class FlashBot extends RobotController {
         //mbot.straight(20);
     }
     public static void main(String[] args) {
-        try (FlashBot robot = new FlashBot("StingBot")) {
+        try (FlashBot robot = new FlashBot("Gorn")) {
             robot.run();
         }
     }

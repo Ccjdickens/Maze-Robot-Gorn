@@ -11,7 +11,7 @@ import _thread
 # --- Configuration ---
 WIFI_SSID = "CIS_WiFi"
 WIFI_PASSWORD = "CIS!2018#WiFi"
-ROBOT_ID = "DickensCupid"
+ROBOT_ID = "Gorn"
 DISCOVERY_PORT = 9998
 COMMAND_PORT = 9990
 TELEMETRY_PORT = 9991
@@ -349,6 +349,7 @@ def camera_learn(mode):
                 mbuild.smart_camera.set_mode(mode="color")
                 mbuild.smart_camera.open_light()
                 for sign_id in COLOR_NAMES.keys():
+                    cyberpi.display.clear()
                     cyberpi.display.show_label(COLOR_NAMES[sign_id], 16, 'center')
                     time.sleep(pause)
                     cyberpi.display.clear()
@@ -604,7 +605,7 @@ def turn(angle):
     while True:
         current_angle = cyberpi.get_yaw()
         if angle > 0:
-            current_angle = current_angle if current_angle >= 0 else 180 + (current_angle % 180) 
+            current_angle = current_angle if current_angle >= 0 else 180 + (current_angle % 180)
         elif angle < 0:
             current_angle = current_angle if current_angle <= 0  else -180 + (current_angle % -180)
         error = angle - current_angle
@@ -769,7 +770,7 @@ def learn_colors():
 # Startup
 # ============================================================
 
-cyberpi.wifi.connect("CIS_WIFI", "CIS!2018#WiFi")
+cyberpi.wifi.connect("CIS_WiFi", "CIS!2018#WiFi") # wifi name & password
 cyberpi.display.show_label("connecting to wifi...", 12, "center")
 while not cyberpi.wifi.is_connect():
     time.sleep(0.1)
@@ -862,3 +863,111 @@ def stop_at_line_behavior():
 def handle_stop_at_line(payload):
     scheduler.start_behavior("STOP_AT_LINE", stop_at_line_behavior)
     return ok_response("STOP_AT_LINE behavior started")
+
+@register_command("FLASH_LED")
+def handle_flash_led(payload):
+    params = payload.get("parameters", {})
+    times  = int(params.get("times", 3))
+    r      = int(params.get("red",   0))
+    g      = int(params.get("green", 0))
+    b      = int(params.get("blue",  255))
+    delay  = float(params.get("delay", 0.3))
+
+    if times < 1 or times > 20:
+        return error_response("INVALID_PARAM",
+                              "times must be between 1 and 20")
+
+    if arbiter.acquire("led", "FLASH_LED", 50):
+        try:
+            for _ in range(times):
+                cyberpi.led.on(r, g, b, id="all")
+                time.sleep(delay)
+                cyberpi.led.off(id="all")
+                time.sleep(delay)
+            return ok_response("Flash complete")
+        finally:
+            arbiter.release("led", "FLASH_LED")
+
+@register_command("PUSH_OBJECT")
+def handle_push_object(payload):
+    # 1. Read distance from ultrasonic
+    if not arbiter.acquire("ultrasonic", "PUSH_OBJECT", 15, blocking=True):
+        return error_response("ARBITER_FAIL", "Could not acquire ultrasonic")
+    try:
+        distance = mbuild.ultrasonic2.get()
+    finally:
+        arbiter.release("ultrasonic", "PUSH_OBJECT")
+
+    # 2. If no nearby object, do nothing
+    if distance is None or distance > 15:
+        return ok_response("No object to push")
+
+    # 3. Use motors to turn, back up, push, and return
+    if not arbiter.acquire("motors", "PUSH_OBJECT", 50, blocking=True):
+        return error_response("ARBITER_FAIL", "Could not acquire motors")
+    try:
+        # turn around
+        turn(180)
+
+        # back up past object  (now move toward the object from behind)
+        mbot2.straight(-distance * 1.3)
+
+        # push sideways
+        move_and_turn(speed=-40, diff=20, is_left=False)
+        time.sleep(3)
+
+        # return to line
+        move_and_turn(speed=40, diff=20, is_left=False)
+        time.sleep(3.3)
+
+        # forward back to startpoint  (reverse the earlier straight move)
+        mbot2.straight(distance * 1.3)
+
+        # turn back
+        turn(180)
+
+        return ok_response("Push complete")
+    finally:
+        arbiter.release("motors", "PUSH_OBJECT")
+
+# ── STEER_AROUND behavior ──────────────────────────────────────────────────
+def steer_around_behavior(threshold, speed, diff):
+    """
+    Called repeatedly by the scheduler.
+    Reads the ultrasonic sensor and either drives straight or arcs left.
+    """
+    # Read the distance — skip this cycle if the sensor is busy
+    if not arbiter.acquire("ultrasonic", "STEER_AROUND", 200, blocking=False):
+        return
+    try:
+        distance = mbuild.ultrasonic2.get()
+    finally:
+        arbiter.release("ultrasonic", "STEER_AROUND")
+    # Acquire the motors — skip this cycle if something higher-priority holds them
+    if not arbiter.acquire("motors", "STEER_AROUND", 200, blocking=False):
+        return
+    try:
+        if distance > threshold:
+            # Path is clear — drive straight
+            mbot2.drive_speed(speed, -speed)
+        else:
+            # Obstacle detected — arc left
+            move_and_turn(speed=speed, diff=diff, is_left=True)
+    finally:
+        arbiter.release("motors", "STEER_AROUND")
+
+@register_command("STEER_AROUND")
+def handle_steer_around(payload):
+    params    = payload.get("parameters", {})
+    threshold = float(params.get("threshold", 25))
+    speed     = float(params.get("speed",     40))
+    diff      = float(params.get("diff",      20))
+    if speed < 0 or speed > 100:
+        return error_response("INVALID_PARAM",
+                              "speed must be between 0 and 100")
+    if diff < 0 or diff >= speed:
+        return error_response("INVALID_PARAM",
+                              "diff must be >= 0 and less than speed")
+    scheduler.start_behavior("STEER_AROUND", steer_around_behavior,
+                             threshold, speed, diff)
+    return ok_response("STEER_AROUND started")

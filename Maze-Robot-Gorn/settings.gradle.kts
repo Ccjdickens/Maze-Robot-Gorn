@@ -1,1 +1,1 @@
-rootProject.name = "BRACE"
+rootProject.name = "Maze-Robot-Gorn"

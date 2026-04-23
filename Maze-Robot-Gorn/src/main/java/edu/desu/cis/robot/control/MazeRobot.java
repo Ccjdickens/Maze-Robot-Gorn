@@ -56,7 +56,7 @@ public class MazeRobot extends RobotController {
      * @param args Command line arguments (not used).
      */
     public static void main(String[] args) {
-        try (MazeRobot amazin = new MazeRobot("DickensCupid")) {
+        try (MazeRobot amazin = new MazeRobot("Gorn")) {
             amazin.run();
         }
     }
