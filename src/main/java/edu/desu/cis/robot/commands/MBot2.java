@@ -510,6 +510,7 @@ public class MBot2 {
     }
 
     public void followLine() {
+
         execute("FOLLOW_LINE", null);
     }
 
