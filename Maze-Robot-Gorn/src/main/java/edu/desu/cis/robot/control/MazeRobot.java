@@ -3,7 +3,7 @@ package edu.desu.cis.robot.control;
 import edu.desu.cis.robot.service.SensorSnapshot;
 
 /**
- * A specific implementation of a robot controller that navigates a maze,
+ * A specific implementation of a robot controller that# navigates a maze,
  * identifies objects, and performs actions based on the object's color.
  *
  */
@@ -19,36 +19,63 @@ public class MazeRobot extends RobotController {
 
     @Override
     public void run() {
-        // need to implement.
 
         while (true) {
 
-            double distance = mbot.readUltrasonic();
+            double forward = mbot.readUltrasonic();
 
-            // First check: the obstacle in front
-            if (distance > 0 && distance < 15) {
-                mbot.stop();
-
-                // Turn right first
-                mbot.turnRight(90);
-
-                // Re-check distance after turning right
-                double afterTurn = mbot.readUltrasonic();
-
-                // If still blocked, turn left instead
-                if (afterTurn > 0 && afterTurn < 15) {
-                    mbot.turnLeft(180);  // 180 = undo right turn + turn left
-                }
-
+            // If forward is clear → go forward
+            if (forward > 20) {
+                mbot.forward(40);
+                pause(200);
                 continue;
             }
 
-            // Otherwise move forward
-            mbot.forward(30);
+            // Forward blocked → scan left
+            mbot.stop();
+            pause(150);
 
-            try { Thread.sleep(100); } catch (Exception e) {}
+            mbot.turnLeft(90);
+            pause(300);
+            double left = mbot.readUltrasonic();
+            mbot.turnRight(90);
+            pause(300);
+
+            // Scan right
+            mbot.turnRight(90);
+            pause(300);
+            double right = mbot.readUltrasonic();
+            mbot.turnLeft(90);
+            pause(300);
+
+            // Choose direction
+            if (left > 20) {
+                mbot.turnLeft(90);
+                pause(300);
+                mbot.forward(40);
+                pause(300);
+            } else if (right > 20) {
+                mbot.turnRight(90);
+                pause(300);
+                mbot.forward(40);
+                pause(300);
+            } else {
+                // Dead end → turn around
+                mbot.turnLeft(180);
+                pause(400);
+                mbot.forward(40);
+                pause(300);
+            }
         }
     }
+
+    private void pause(long ms) {
+        try { Thread.sleep(ms); }
+        catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
 
 
     /**
@@ -56,7 +83,7 @@ public class MazeRobot extends RobotController {
      * @param args Command line arguments (not used).
      */
     public static void main(String[] args) {
-        try (MazeRobot amazin = new MazeRobot("DickensCupid")) {
+        try (MazeRobot amazin = new MazeRobot("Wisp")) {
             amazin.run();
         }
     }
