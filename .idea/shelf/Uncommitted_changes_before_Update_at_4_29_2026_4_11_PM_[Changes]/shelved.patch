@@ -1,0 +1,282 @@
+Index: Maze-Robot-Gorn/.gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/Maze-Robot-Gorn/.gradle/buildOutputCleanup/cache.properties b/Maze-Robot-Gorn/.gradle/buildOutputCleanup/cache.properties
+deleted file mode 100644
+--- a/Maze-Robot-Gorn/.gradle/buildOutputCleanup/cache.properties	(revision f8d3727b02dc464cb6f3352edc74bbe607f514d6)
++++ /dev/null	(revision f8d3727b02dc464cb6f3352edc74bbe607f514d6)
+@@ -1,2 +0,0 @@
+-#Wed Apr 22 22:35:53 EDT 2026
+-gradle.version=9.0.0
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6b80421f-fa32-4dfd-a17a-65cce53c8705\" name=\"Changes\" comment=\"Completed Moving Obstacles\">\r\n      <change afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/PushBot.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/BRACE-Architectural-Comparison.pdf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/BRACE-Developer-Guide.pdf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/allclasses-index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/allpackages-index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/CommandResult.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/MBot2.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/RobotCommandException.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/control/MazeRobot.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/control/RobotController.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/control/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/control/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/ServiceLocator.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/DiscoveredRobot.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/RobotDiscovery.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/UdpDiscoveryService.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonCodec.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonResponse.Payload.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonResponse.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/MBot2JsonCodec.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/RobotService.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/RobotServiceException.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorCache.BallData.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorCache.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorSnapshot.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/TcpRobotService.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/TelemetryListener.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/package-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/edu/desu/cis/robot/service/package-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/element-list\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/help-doc.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-1.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-10.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-11.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-12.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-13.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-14.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-15.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-16.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-17.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-18.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-19.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-2.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-3.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-4.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-5.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-6.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-7.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-8.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index-files/index-9.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/LICENSE\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/dejavufonts.md\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/jquery.md\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/legal/jqueryUI.md\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/member-search-index.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/module-search-index.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/overview-summary.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/overview-tree.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/package-search-index.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/copy.svg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Bold.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Bold.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-BoldOblique.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-BoldOblique.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Oblique.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Oblique.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Bold.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Bold.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-BoldOblique.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-BoldOblique.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Oblique.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Oblique.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Bold.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Bold.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-BoldItalic.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-BoldItalic.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Italic.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Italic.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif.woff\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif.woff2\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/fonts/dejavu.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/glass.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/jquery-ui.min.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/link.svg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/stylesheet.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/resource-files/x.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/script-files/jquery-3.7.1.min.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/script-files/jquery-ui.min.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/script-files/script.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/script-files/search-page.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/script-files/search.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/search.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/serialized-form.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/tag-search-index.js\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/docs/type-search-index.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/Maze-Robot-Gorn.iml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/settings.gradle.kts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/settings.gradle.kts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/FlashBot.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/FlashBot.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/MazeRobot.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/MazeRobot.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/RovingRobot.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/RovingRobot.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/SquareRobot.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/SquareRobot.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$/Maze-Robot-Gorn\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Maze-Robot-Gorn\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Moving-Obstacles-Joshua-Parker\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;2JuicyToast&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/Ccjdickens/Maze-Robot-Gorn.git\",\r\n    \"accountId\": \"7d2888dd-f506-4115-87ce-17197adb6df5\"\r\n  },\r\n  \"recentNewPullRequestHead\": {\r\n    \"server\": {\r\n      \"useHttp\": false,\r\n      \"host\": \"github.com\",\r\n      \"port\": null,\r\n      \"suffix\": null\r\n    },\r\n    \"owner\": \"2JuicyToast\",\r\n    \"repository\": \"BRACE-MazeBot-Gorn\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GradleScriptDefinitionsStorage\" workingDir=\"$PROJECT_DIR$/Maze-Robot-Gorn\" gradleHome=\"C:\\Users\\Bacon\\.gradle\\wrapper\\dists\\gradle-9.0.0-bin\\d6wjpkvcgsg3oed0qlfss3wgl\\gradle-9.0.0\" javaHome=\"C:\\Program Files\\Java\\jdk-21\" gradleVersion=\"9.0.0\" />\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2,\r\n  &quot;fromUser&quot;: false\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3CiWS8l2prNcXhz3zGe4EmaFTvZ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Gradle.BRACE-MazeBot-Gorn.executor\": \"Run\",\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"Moving-Obstacles-Joshua-Parker\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Bacon/OneDrive/Documents/IdeaProjects/Maze-Robot-Gorn\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"preferences.keymap\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Bacon\\OneDrive\\Documents\\IdeaProjects\\Maze-Robot-Gorn\\.idea\" />\r\n      <recent name=\"C:\\Users\\Bacon\\OneDrive\\Documents\\IdeaProjects\\Maze-Robot-Gorn\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Maze-Robot-Gorn\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list />\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <RunAsTest>false</RunAsTest>\r\n      <GradleProfilingDisabled>false</GradleProfilingDisabled>\r\n      <GradleCoverageDisabled>false</GradleCoverageDisabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6b80421f-fa32-4dfd-a17a-65cce53c8705\" name=\"Changes\" comment=\"\" />\r\n      <created>1776868868069</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1776868868069</updated>\r\n      <workItem from=\"1776868869531\" duration=\"1540000\" />\r\n      <workItem from=\"1776912369509\" duration=\"586000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Completed Moving Obstacles\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776869348644</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776869348646</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Completed Moving Obstacles\" />\r\n    <MESSAGE value=\"Delete settings.gradle.kts\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f8d3727b02dc464cb6f3352edc74bbe607f514d6)
++++ b/.idea/workspace.xml	(date 1777493446825)
+@@ -5,128 +5,16 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="6b80421f-fa32-4dfd-a17a-65cce53c8705" name="Changes" comment="Completed Moving Obstacles">
+-      <change afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/PushBot.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/BRACE-Architectural-Comparison.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/BRACE-Developer-Guide.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/CommandResult.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/MBot2.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/RobotCommandException.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/commands/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/control/MazeRobot.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/control/RobotController.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/control/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/control/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/ServiceLocator.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/core/services/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/DiscoveredRobot.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/RobotDiscovery.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/UdpDiscoveryService.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/discovery/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonCodec.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonResponse.Payload.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/JsonResponse.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/MBot2JsonCodec.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/protocol/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/RobotService.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/RobotServiceException.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorCache.BallData.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorCache.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/SensorSnapshot.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/TcpRobotService.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/TelemetryListener.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/package-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/edu/desu/cis/robot/service/package-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-19.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/LICENSE" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/dejavufonts.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/jquery.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/legal/jqueryUI.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/module-search-index.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/copy.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Bold.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Bold.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-BoldOblique.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-BoldOblique.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Oblique.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans-Oblique.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSans.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Bold.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Bold.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-BoldOblique.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-BoldOblique.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Oblique.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono-Oblique.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSansMono.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Bold.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Bold.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-BoldItalic.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-BoldItalic.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Italic.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif-Italic.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif.woff" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/DejaVuLGCSerif.woff2" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/fonts/dejavu.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/glass.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/jquery-ui.min.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/link.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/stylesheet.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/resource-files/x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/script-files/jquery-3.7.1.min.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/script-files/jquery-ui.min.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/script-files/script.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/script-files/search-page.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/script-files/search.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/search.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/tag-search-index.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/Maze-Robot-Gorn.iml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/settings.gradle.kts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/FlashBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/FlashBot.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/MazeRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/MazeRobot.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/RovingRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/RovingRobot.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/SquareRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/SquareRobot.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/checksums/checksums.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/executionHistory/executionHistory.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileChanges/last-build.bin" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.bin" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/gc.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/vcs-1/gc.properties" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -168,7 +56,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Moving-Obstacles-Joshua-Parker" />
++        <entry key="$PROJECT_DIR$" value="Wall-Following-Joshua-Parker" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -179,22 +67,22 @@
+     &quot;assignee&quot;: &quot;2JuicyToast&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/Ccjdickens/Maze-Robot-Gorn.git",
+-    "accountId": "7d2888dd-f506-4115-87ce-17197adb6df5"
+-  },
+-  "recentNewPullRequestHead": {
+-    "server": {
+-      "useHttp": false,
+-      "host": "github.com",
+-      "port": null,
+-      "suffix": null
+-    },
+-    "owner": "2JuicyToast",
+-    "repository": "BRACE-MazeBot-Gorn"
+-  }
+-}]]></component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Ccjdickens/Maze-Robot-Gorn.git&quot;,
++    &quot;accountId&quot;: &quot;7d2888dd-f506-4115-87ce-17197adb6df5&quot;
++  },
++  &quot;recentNewPullRequestHead&quot;: {
++    &quot;server&quot;: {
++      &quot;useHttp&quot;: false,
++      &quot;host&quot;: &quot;github.com&quot;,
++      &quot;port&quot;: null,
++      &quot;suffix&quot;: null
++    },
++    &quot;owner&quot;: &quot;2JuicyToast&quot;,
++    &quot;repository&quot;: &quot;BRACE-MazeBot-Gorn&quot;
++  }
++}</component>
+   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/Maze-Robot-Gorn" gradleHome="C:\Users\Bacon\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0" javaHome="C:\Program Files\Java\jdk-21" gradleVersion="9.0.0" />
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 2,
+@@ -205,26 +93,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Gradle.BRACE-MazeBot-Gorn.executor": "Run",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "Moving-Obstacles-Joshua-Parker",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/Bacon/OneDrive/Documents/IdeaProjects/Maze-Robot-Gorn",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "preferences.keymap",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Gradle.BRACE-MazeBot-Gorn.executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.FlashBot.main()].executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.LineWalkBot.main()].executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.PushBot.main()].executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.SquareRobot.main()].executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.Maze-Robot-Gorn.executor&quot;: &quot;Run&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bacon/OneDrive/Documents/IdeaProjects/Maze-Robot-Gorn&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Bacon\OneDrive\Documents\IdeaProjects\Maze-Robot-Gorn\.idea" />
+@@ -287,6 +180,17 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Completed Moving Obstacles" />
+diff --git a/Maze-Robot-Gorn/.gradle/9.0.0/gc.properties b/Maze-Robot-Gorn/.gradle/9.0.0/gc.properties
+deleted file mode 100644
+diff --git a/Maze-Robot-Gorn/.gradle/vcs-1/gc.properties b/Maze-Robot-Gorn/.gradle/vcs-1/gc.properties
+deleted file mode 100644
