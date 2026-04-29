@@ -545,4 +545,9 @@ public class MBot2 {
     public void pushObject() {
         execute("PUSH_OBJECT", null);
     }
+
+    public void followLine() {
+        execute("FOLLOW_LINE", null);
+    }
 }
+

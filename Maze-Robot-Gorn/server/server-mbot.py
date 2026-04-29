@@ -9,8 +9,8 @@ import _thread
 
 
 # --- Configuration ---
-WIFI_SSID = "CIS_WiFi"
-WIFI_PASSWORD = "CIS!2018#WiFi"
+WIFI_SSID = "406"
+WIFI_PASSWORD = "oceanwave1"
 ROBOT_ID = "Gorn"
 DISCOVERY_PORT = 9998
 COMMAND_PORT = 9990
@@ -240,7 +240,7 @@ class MBotServer:
                 continue
 
             if msg.get("type") == "DISCOVERY" and \
-               msg.get("payload", {}).get("robot") == ROBOT_ID:
+                    msg.get("payload", {}).get("robot") == ROBOT_ID:
                 response = {
                     "type": "DISCOVERY",
                     "id": msg.get("id"),
@@ -770,7 +770,7 @@ def learn_colors():
 # Startup
 # ============================================================
 
-cyberpi.wifi.connect("CIS_WiFi", "CIS!2018#WiFi") # wifi name & password
+cyberpi.wifi.connect(WIFI_SSID, WIFI_PASSWORD) # wifi name & password
 cyberpi.display.show_label("connecting to wifi...", 12, "center")
 while not cyberpi.wifi.is_connect():
     time.sleep(0.1)
@@ -863,6 +863,49 @@ def stop_at_line_behavior():
 def handle_stop_at_line(payload):
     scheduler.start_behavior("STOP_AT_LINE", stop_at_line_behavior)
     return ok_response("STOP_AT_LINE behavior started")
+
+def follow_line_behavior():
+    if not arbiter.acquire("line", "FOLLOW_LINE", 10, blocking=False):
+        return
+    try:
+        line = mbuild.quad_rgb_sensor.get_line_sta()
+    finally:
+        arbiter.release("line", "FOLLOW_LINE")
+
+    if not arbiter.acquire("motors", "FOLLOW_LINE", 10, blocking=False):
+        return
+    try:
+        kp = 0.4
+        base_speed = 30
+
+        if line == 1:
+            error = 0
+        elif line == 0:
+            error = 30
+        elif 1 < line < 4:
+            error = -20
+        elif line < 7:
+            error = -35
+        else:
+            error = -50
+
+        correction = error * kp
+
+        em1_speed = base_speed + correction
+        em1_speed = min(max(em1_speed, -50), 50)
+
+        em2_speed = -base_speed + correction
+        em2_speed = min(max(em2_speed, -50), 50)
+
+        mbot2.drive_speed(em1_speed, em2_speed)
+    finally:
+        arbiter.release("motors", "FOLLOW_LINE")
+
+
+@register_command("FOLLOW_LINE")
+def handle_follow_line(payload):
+    scheduler.start_behavior("FOLLOW_LINE", follow_line_behavior)
+    return ok_response("Following Line")
 
 @register_command("FLASH_LED")
 def handle_flash_led(payload):
