@@ -349,7 +349,7 @@ def camera_learn(mode):
                 mbuild.smart_camera.set_mode(mode="color")
                 mbuild.smart_camera.open_light()
 
-for sign_id in COLOR_NAMES.keys():
+                for sign_id in COLOR_NAMES.keys():
                     cyberpi.display.clear()
                     cyberpi.display.show_label(COLOR_NAMES[sign_id], 16, 'center')
                     time.sleep(pause)
@@ -1015,6 +1015,7 @@ def handle_steer_around(payload):
     scheduler.start_behavior("STEER_AROUND", steer_around_behavior,
                              threshold, speed, diff)
     return ok_response("STEER_AROUND started")
+
 @register_command("MISSION_COMPLETED")
 def handle_mission_completed(payload):
     scheduler.stop_all()
@@ -1033,3 +1034,42 @@ def handle_mission_completed(payload):
     cyberpi.audio.play_tone(784, 0.35)
 
     return ok_response("Mission completed")
+
+@register_command("SAMPLE_FOUND")
+def handle_sample_found(payload):
+    cyberpi.display.clear()
+    cyberpi.display.show_label("SAMPLE FOUND", 16, "center")
+    return ok_response("Sample found displayed")
+
+
+@register_command("DANCE")
+def handle_dance(payload):
+    if not arbiter.acquire("motors", "DANCE", 60, blocking=True):
+        return error_response("ARBITER_FAIL", "Could not acquire motors")
+    try:
+        turn(45)
+        turn(-90)
+        turn(45)
+        turn(-360)
+
+        turn(45)
+        turn(-90)
+        turn(45)
+        turn(-360)
+
+        return ok_response("Dance complete")
+    finally:
+        mbot2.forward(speed=0)
+        arbiter.release("motors", "DANCE")
+
+@register_command("JINGLE")
+def handle_jingle(payload):
+    try:
+        cyberpi.audio.play_tone(523, 0.2)
+        time.sleep(0.05)
+        cyberpi.audio.play_tone(659, 0.2)
+        time.sleep(0.05)
+        cyberpi.audio.play_tone(784, 0.3)
+        return ok_response("Jingle played")
+    except Exception as e:
+        return error_response("JINGLE_ERROR", str(e))
