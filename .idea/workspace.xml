@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b80421f-fa32-4dfd-a17a-65cce53c8705" name="Changes" comment="Completed Moving Obstacles">
-      <change afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/WallFollowing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6b80421f-fa32-4dfd-a17a-65cce53c8705" name="Changes" comment="Completed Wall Following">
+      <change afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/control/Exit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/9.0.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/server/server-mbot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze-Robot-Gorn/src/main/java/edu/desu/cis/robot/commands/MBot2.java" afterDir="false" />
     </list>
@@ -56,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="IdentifyObjects-OmarMoustafa-JoshuaParker" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,8 +82,8 @@
       &quot;port&quot;: null,
       &quot;suffix&quot;: null
     },
-    &quot;owner&quot;: &quot;2JuicyToast&quot;,
-    &quot;repository&quot;: &quot;BRACE-MazeBot-Gorn&quot;
+    &quot;owner&quot;: &quot;Ccjdickens&quot;,
+    &quot;repository&quot;: &quot;Maze-Robot-Gorn&quot;
   }
 }</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/Maze-Robot-Gorn" gradleHome="C:\Users\omarm\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0" javaHome="C:\Program Files\Java\jdk-21" gradleVersion="9.0.0" />
@@ -96,6 +99,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.BRACE-MazeBot-Gorn.executor": "Run",
+    "Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.Exit.main()].executor": "Run",
     "Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.FlashBot.main()].executor": "Run",
     "Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.PushBot.main()].executor": "Run",
     "Gradle.Maze-Robot-Gorn [:edu.desu.cis.robot.control.WallFollowing.main()].executor": "Run",
@@ -106,7 +110,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "WallFollowing-OmarMoustafa",
+    "git-widget-placeholder": "Exit-OmarMoustafa",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Bacon/OneDrive/Documents/IdeaProjects/Maze-Robot-Gorn",
     "nodejs_package_manager_path": "npm",
@@ -173,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776869348646</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed Wall Following">
+      <option name="closed" value="true" />
+      <created>1777427951814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777427951814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed Moving Obstacles" />
     <MESSAGE value="Delete settings.gradle.kts" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Completed Wall Following" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Wall Following" />
   </component>
 </project>

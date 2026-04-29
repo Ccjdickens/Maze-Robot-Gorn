@@ -9,8 +9,8 @@ import _thread
 
 
 # --- Configuration ---
-WIFI_SSID = "406"
-WIFI_PASSWORD = "oceanwave1"
+WIFI_SSID = "CIS_WiFi"
+WIFI_PASSWORD = "CIS!2018#WiFi"
 ROBOT_ID = "Gorn"
 DISCOVERY_PORT = 9998
 COMMAND_PORT = 9990
@@ -348,7 +348,8 @@ def camera_learn(mode):
             if mode == "COLOR":
                 mbuild.smart_camera.set_mode(mode="color")
                 mbuild.smart_camera.open_light()
-                for sign_id in COLOR_NAMES.keys():
+
+for sign_id in COLOR_NAMES.keys():
                     cyberpi.display.clear()
                     cyberpi.display.show_label(COLOR_NAMES[sign_id], 16, 'center')
                     time.sleep(pause)
@@ -1014,3 +1015,21 @@ def handle_steer_around(payload):
     scheduler.start_behavior("STEER_AROUND", steer_around_behavior,
                              threshold, speed, diff)
     return ok_response("STEER_AROUND started")
+@register_command("MISSION_COMPLETED")
+def handle_mission_completed(payload):
+    scheduler.stop_all()
+
+    if arbiter.acquire("motors", "MISSION_COMPLETED", 100):
+        try:
+            mbot2.forward(speed=0)
+        finally:
+            arbiter.release("motors", "MISSION_COMPLETED")
+
+    cyberpi.display.clear()
+    cyberpi.display.show_label("MISSION COMPLETED", 16, "center")
+
+    cyberpi.audio.play_tone(523, 0.25)
+    cyberpi.audio.play_tone(659, 0.25)
+    cyberpi.audio.play_tone(784, 0.35)
+
+    return ok_response("Mission completed")
