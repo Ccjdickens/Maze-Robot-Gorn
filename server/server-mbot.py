@@ -1073,3 +1073,48 @@ def handle_jingle(payload):
         return ok_response("Jingle played")
     except Exception as e:
         return error_response("JINGLE_ERROR", str(e))
+
+def follow_line_behavior():
+    if not arbiter.acquire("line", " FOLLOW_LINE ", 10, blocking=False):
+        return
+    try:
+        status = mbuild.quad_rgb_sensor.get_line_sta()
+    finally:
+        arbiter.release("line", " FOLLOW_LINE ")
+    if not arbiter.acquire("motors", " FOLLOW_LINE ", 10, blocking=False):
+        return
+    try:
+        kp = 0.4
+        base_speed = 30
+        if status == 0:
+            error = 50
+            mbot.sleep
+        elif status == 1:
+            error = 0
+        elif status > 1 and status < 4:
+            error = -19
+
+        elif status < 7:
+            error = -20
+
+        elif status >= 14:
+            error = -75
+
+        else:
+            error = -40
+
+        cyberpi.console.print(str(error)+",")
+        correction = error * kp
+        em1_speed = base_speed + correction
+        em1_speed = min(max(em1_speed, -50), 50)
+        em2_speed = -base_speed + correction
+        em2_speed = min(max(em2_speed, -50), 50)
+        mbot2.drive_speed(em1_speed, em2_speed)
+    finally:
+        arbiter.release("motors", " FOLLOW_LINE ")
+
+@register_command("FOLLOW_LINE")
+def handle_follow_line(payload):
+    scheduler.start_behavior("FOLLOW_LINE", follow_line_behavior)
+    return ok_response("Following Line")
+
