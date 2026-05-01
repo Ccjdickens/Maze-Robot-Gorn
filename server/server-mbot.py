@@ -876,7 +876,7 @@ def follow_line_behavior():
     if not arbiter.acquire("motors", "FOLLOW_LINE", 10, blocking=False):
         return
     try:
-        kp = 0.4
+        kp = 0.7
         base_speed = 30
 
         if line == 1:
