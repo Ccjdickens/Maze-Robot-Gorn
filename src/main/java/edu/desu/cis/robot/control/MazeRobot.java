@@ -108,7 +108,7 @@ public class MazeRobot extends RobotController {
     }
 
     public static void main(String[] args) {
-        try (MazeRobot robot = new MazeRobot("Blue")) {
+        try (MazeRobot robot = new MazeRobot("Gorn")) {
             robot.run();
         }
     }
