@@ -30,7 +30,7 @@ public class MazeRobot extends RobotController {
 
             switch (currentState) {
                 case CRUISING:
-                    if (sensor.distance() < 15) {
+                    if (sensor.distance() <= 15) {
                         currentState = State.IDENTIFY_OBJECT;
                     }
                     break;
@@ -45,7 +45,6 @@ public class MazeRobot extends RobotController {
 
                     if ("BLUE".equals(color)) {
                         mbot.stopAllBehaviors();
-                        mbot.steerAround(35, 40, 35); // let run longer then steer more
                         currentState = State.AVOID_OBJECT;
                     } else if ("GREEN".equals(color)) {
                         mbot.stopAllBehaviors();
@@ -64,19 +63,24 @@ public class MazeRobot extends RobotController {
                     }
                     break;
 
-                case AVOID_OBJECT: // adjust for maze
-                    if(sensor.distance() > 40) {
-                        mbot.stopBehavior("STEER_AROUND");
-                        mbot.turnRight(90);
-                        mbot.straight(10);
-                        mbot.followLine();
-                        mbot.avoidCrashing(15);
-                        currentState = State.CRUISING;
-                        break;
+                case AVOID_OBJECT: // completed
+                    mbot.steerAround(40, 40, 38);
+
+                    try { // continues steering around before moving to next line
+                        Thread.sleep(2200);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
                     }
 
+                    mbot.stopBehavior("STEER_AROUND");
+                    mbot.turnRight(45);
+                    mbot.straight(20);
+                    mbot.followLine();
+                    mbot.avoidCrashing(15);
+                    currentState = State.CRUISING;
+                    break;
+
                 case PUSH_OBJECT:// completed
-                    mbot.forward(20, 1.5);
                     mbot.stop();
                     mbot.pushObject();
                     mbot.followLine();
@@ -85,7 +89,6 @@ public class MazeRobot extends RobotController {
                     break;
 
                 case COLLECT_SAMPLE: // completed
-                    mbot.forward(20, 1.5);
                     mbot.stop();
                     mbot.sampleFound();
                     mbot.pushObject();
@@ -105,7 +108,7 @@ public class MazeRobot extends RobotController {
     }
 
     public static void main(String[] args) {
-        try (MazeRobot robot = new MazeRobot("Blue")) {
+        try (MazeRobot robot = new MazeRobot("Gorn")) {
             robot.run();
         }
     }
